@@ -86,9 +86,19 @@
         * {
             font-family: 'Arial';
         }
+        .title {
+            position: absolute;
+            left: 850px;
+            top: 0;
+            color: black;
+            font-size: 50px;
+            border:1px solid blueviolet ;
+            box-shadow: 0 5px 10px 10px;
+        }
         </style>
     </head>
     <body>
+        <h1 class="title">Jair Merlo</h1>
         <div class="gameboard">
         <div id="celeste" class="color celeste left" data-color="celeste"></div>
         <div id="violeta" class="color violeta right" data-color="violeta"></div>
@@ -224,11 +234,11 @@ class Juego {
     }
 
     ganoElJuego() {
-        swal('Platzi', 'Felicitaciones, ganaste', 'success')
+        swal('Hey', 'Felicitaciones, ganaste', 'success')
             .then(this.inicializar)
     }
     perdioElJuego() {
-        swal('Platzi', 'Perdio :( ', 'error')
+        swal('Lo siento', 'Perdio :( ', 'error')
             .then(() => {
                 this.eliminarEventosClick()
                 this.inicializar()
